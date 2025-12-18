@@ -107,7 +107,8 @@ git clone https://github.com/ваш-репозиторий/RemotePCInfo.git
 ### Структура проекта
 ```
 RemotePCInfo/
-├── RemotePCInfo.ps1          # Main script
+├── RemotePCInfo.ps1          # Main script. Russian version
+├── RemotePCInfo_ENG.ps1      # Main script. English version
 ├── README.md                 # Russian documentation
 ├── README_ENG.md             # English documentation
 ├── PsExec64.exe              # PsExec 64-bit (needs to be added)
