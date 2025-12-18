@@ -1,6 +1,6 @@
 # RemotePCInfo - Remote Computer Information Gathering Script
 
-Ссылка на русскую документацию - 
+Ссылка на русскую документацию - [RU](https://github.com/asmadeusx/remote_pc_info/blob/main/README.md)
 
 #### RemotePCInfo is a PowerShell script for automatically collecting system information from remote computers on a network. The script uses PsExec for remote command execution and gathers detailed data about hardware and software configuration.
 
