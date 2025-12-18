@@ -13,5 +13,11 @@
 # all backup files
 *.backup
 
+# all archives
+*.7z
+*.zip
+*.rar
+*.gzip
+
 # computers.txt 
 computers.txt
