@@ -93,7 +93,7 @@ Link to English Docs - [ENG](https://github.com/asmadeusx/remote_pc_info/blob/ma
 1. Склонируйте репозиторий или скачайте скрипт:
 
 ```
-git clone https://github.com/ваш-репозиторий/RemotePCInfo.git
+git clone https://github.com/asmadeusx/remote_pc_info.git
 ```
 
 2. Поместите один из файлов PsExec в папку со скриптом:

@@ -92,7 +92,7 @@ Features
 ### Installation
 1. Clone the repository or download the script:
 ```
-git clone https://github.com/ваш-репозиторий/RemotePCInfo.git
+git clone https://github.com/asmadeusx/remote_pc_info.git
 ```
 2. Place one of the PsExec files in the script folder:
 
