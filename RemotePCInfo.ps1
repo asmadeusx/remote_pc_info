@@ -191,6 +191,24 @@ foreach ($card in $videoCards) {
     Write-OutputBoth $gpu -FilePath $OutputFile
     Write-OutputBoth "" -FilePath $OutputFile
 
+    # 8. Информация о BIOS/UEFI
+    Write-OutputBoth "8. ИНФОРМАЦИЯ О БИОС (UEFI):" -FilePath $OutputFile
+    $biosInfo = Invoke-RemoteCommand -RemotePCIP $RemotePCIP -Command @'
+$bios = Get-WmiObject -Class Win32_BIOS
+$releaseDate = [Management.ManagementDateTimeConverter]::ToDateTime($bios.ReleaseDate)
+$currentDate = Get-Date
+$daysSinceRelease = [math]::Round(($currentDate - $releaseDate).TotalDays, 0)
+
+Write-Host "Производитель BIOS: $($bios.Manufacturer)"
+Write-Host "   Версия: $($bios.SMBIOSBIOSVersion)"
+Write-Host "   Серийный номер: $($bios.SerialNumber)"
+Write-Host "   Версия прошивки: $($bios.Version)"
+Write-Host "   Дата выпуска: $($releaseDate.ToString('yyyy-MM-dd'))"
+Write-Host "   Дней с выпуска: $daysSinceRelease"
+'@
+    Write-OutputBoth $biosInfo -FilePath $OutputFile
+    Write-OutputBoth "" -FilePath $OutputFile
+
     Write-OutputBoth "=== СБОР ИНФОРМАЦИИ ЗАВЕРШЕН ===" -FilePath $OutputFile
 }
 

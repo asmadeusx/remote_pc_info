@@ -1,4 +1,4 @@
-# RemotePCInfo.ps1 - Optimized script for collecting information about remote PCs
+# RemotePCInfo_ENG.ps1 - Optimized script for collecting remote PC information
 
 # Determine the script folder path
 $scriptPath = Split-Path -Parent $MyInvocation.MyCommand.Path
@@ -189,6 +189,24 @@ foreach ($card in $videoCards) {
 }
 '@
     Write-OutputBoth $gpu -FilePath $OutputFile
+    Write-OutputBoth "" -FilePath $OutputFile
+
+    # 8. BIOS/UEFI information
+    Write-OutputBoth "8. BIOS (UEFI) INFORMATION:" -FilePath $OutputFile
+    $biosInfo = Invoke-RemoteCommand -RemotePCIP $RemotePCIP -Command @'
+$bios = Get-WmiObject -Class Win32_BIOS
+$releaseDate = [Management.ManagementDateTimeConverter]::ToDateTime($bios.ReleaseDate)
+$currentDate = Get-Date
+$daysSinceRelease = [math]::Round(($currentDate - $releaseDate).TotalDays, 0)
+
+Write-Host "BIOS Manufacturer: $($bios.Manufacturer)"
+Write-Host "   Version: $($bios.SMBIOSBIOSVersion)"
+Write-Host "   Serial Number: $($bios.SerialNumber)"
+Write-Host "   Firmware Version: $($bios.Version)"
+Write-Host "   Release Date: $($releaseDate.ToString('yyyy-MM-dd'))"
+Write-Host "   Days Since Release: $daysSinceRelease"
+'@
+    Write-OutputBoth $biosInfo -FilePath $OutputFile
     Write-OutputBoth "" -FilePath $OutputFile
 
     Write-OutputBoth "=== INFORMATION COLLECTION COMPLETED ===" -FilePath $OutputFile
