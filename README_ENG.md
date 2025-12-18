@@ -79,6 +79,14 @@ Features
     - Driver version
     - Video processor
 
+- BIOS/UEFI
+    - Manufacturer
+    - Version
+    - Serial Number
+    - Firmware Version
+    - Release Date
+    - Days Since Release
+
 ---
 
 ### Requirements
