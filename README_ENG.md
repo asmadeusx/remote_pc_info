@@ -87,12 +87,13 @@ RemotePCInfo/
 ├── RemotePCInfo.ps1          # Main script
 ├── README.md                 # Russian documentation
 ├── README_ENG.md             # English documentation
-├── PsExec64.exe              # PsExec 64-bit
-├── PsExec.exe                # PsExec 32-bit
+├── PsExec64.exe              # PsExec 64-bit (needs to be added)
+├── PsExec.exe                # PsExec 32-bit (needs to be added)
 ├── computers.txt             # Computers list (created automatically)
 └── CollectedPCInfo.txt       # Scanning results (created automatically)
 ```
-
+Link to PSTools site - [Link](https://learn.microsoft.com/en-us/sysinternals/downloads/pstools)
+Direct link for Downloading - [Link](https://download.sysinternals.com/files/PSTools.zip)
 ---
 
 ### Usage

@@ -19,5 +19,12 @@
 *.rar
 *.gzip
 
+# All exe files
+*.exe
+
 # computers.txt 
 computers.txt
+
+# PSTools
+PsExec.exe
+PsExec64.exe
