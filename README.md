@@ -93,6 +93,9 @@ RemotePCInfo/
 ├── computers.txt             # Список компьютеров (создается автоматически)
 └── CollectedPCInfo.txt       # Результаты сканирования (создается автоматически)
 ```
+ВАЖНО: В соответствии с лицензией Microsoft, PSTools не могут распространяться вместе с этим скриптом.
+Для работы скрипта необходимо самостоятельно скачать PSTools и поместить исполняемые файлы в папку проекта.
+
 Ссылка на сайт PSTools - [Ссылка](https://learn.microsoft.com/en-us/sysinternals/downloads/pstools)
 Прямая ссылка для загрузки - [Ссылка](https://download.sysinternals.com/files/PSTools.zip)
 ---

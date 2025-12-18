@@ -1,30 +1,45 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# dependencies
-# PSTools
-# /PSTools
+# ============================================
+# ФАЙЛЫ, КОТОРЫЕ ПОЛЬЗОВАТЕЛЬ ДОЛЖЕН СОЗДАТЬ САМ
+# ============================================
 
-# all log files
+# PSTools - НЕ добавляем в репозиторий по лицензионным причинам
+PsExec.exe
+PsExec64.exe
+
+# ============================================
+# ФАЙЛЫ, КОТОРЫЕ СОЗДАЮТСЯ АВТОМАТИЧЕСКИ ПРИ РАБОТЕ
+# ============================================
+
+# Выходной файл с результатами сканирования
+CollectedPCInfo.txt
+
+# Файл со списком компьютеров (создаётся при первом запуске если отсутствует)
+computers.txt
+
+# ============================================
+# СИСТЕМНЫЕ И ВРЕМЕННЫЕ ФАЙЛЫ
+# ============================================
+
+# Файлы журналов
 *.log
 
-# all txt files
-*.txt
-
-# all backup files
+# Резервные копии
 *.backup
+*~
 
-# all archives
+# Архивы
 *.7z
 *.zip
 *.rar
-*.gzip
+*.gz
+*.tar
 
-# All exe files
-*.exe
+# Временные файлы Windows
+Thumbs.db
+.DS_Store
+desktop.ini
 
-# computers.txt 
-computers.txt
-
-# PSTools
-PsExec.exe
-PsExec64.exe
+# Файлы сессий PowerShell
+*.psess
