@@ -4,6 +4,29 @@
 
 #### RemotePCInfo is a PowerShell script for automatically collecting system information from remote computers on a network. The script uses PsExec for remote command execution and gathers detailed data about hardware and software configuration.
 
+---
+
+#### ⚠️ Legal Disclaimer and Acceptable Use Policy
+This script and its associated utilities are an administrative tool designed solely for the lawful gathering of information within corporate environments.
+
+Intended Use:
+
+- ✅ For use by qualified system administrators, IT support engineers, and other authorized IT personnel.
+- ✅ Application only within the internal network of an organization where the user holds the appropriate professional authority.
+- ✅ All actions must strictly comply with internal corporate security policies, guidelines, and employment contracts.
+
+Strictly Prohibited:
+
+- ❌ Any use for gathering information about systems not owned by your organization without the direct and explicit written consent of their owner.
+- ❌ Scanning or interacting with any public resources, home networks, or third-party systems.
+- ❌ Use in any manner that could be construed as unauthorized access, cyber reconnaissance, or preparation for an attack.
+
+The user assumes full legal and disciplinary responsibility for any consequences arising from the use of this tool. 
+
+The developer is not liable for its misuse.
+
+---
+
 Features
 - 📊 System and hardware information collection
 - 🌐 Remote access support via PsExec
